@@ -121,15 +121,17 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans p-4 md:p-8 max-w-4xl mx-auto">
       {/* Header */}
-      <header className="legacy-header pb-4 mb-8 text-center">
-        <div className="flex items-center justify-center gap-3 mb-1">
-          <img src="/logo.png" alt="NayAye Logo" className="w-16 h-16 object-contain" />
-          <h1 className="text-4xl font-serif font-bold tracking-tight text-navy">NayAye</h1>
+      <header className="legacy-header pb-4 mb-12 text-center">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8">
+          <img src="/logo.png" alt="NayAye Logo" className="w-32 h-32 md:w-48 md:h-48 object-contain" />
+          <div className="text-center md:text-left">
+            <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight text-navy">NayAye</h1>
+            <p className="text-gold font-serif italic text-lg mt-2 md:mt-4">
+              From post roads to prompt roads.
+            </p>
+          </div>
         </div>
-        <p className="text-gold font-serif italic text-sm ml-1">
-          From post roads to prompt roads.
-        </p>
-        <div className="mt-4 text-xs uppercase tracking-widest text-navy/60 font-semibold">
+        <div className="text-xs uppercase tracking-widest text-navy/60 font-semibold">
           Unofficial Office of the Digital Surveyor
         </div>
       </header>
