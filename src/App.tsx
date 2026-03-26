@@ -121,8 +121,8 @@ export default function App() {
   return (
     <div className="min-h-screen font-sans p-4 md:p-8 max-w-4xl mx-auto">
       {/* Header */}
-      <header className="legacy-header pb-4 mb-8 text-center md:text-left">
-        <div className="flex items-center justify-center md:justify-start gap-3 mb-1">
+      <header className="legacy-header pb-4 mb-8 text-center">
+        <div className="flex items-center justify-center gap-3 mb-1">
           <img src="/logo.png" alt="NayAye Logo" className="w-16 h-16 object-contain" />
           <h1 className="text-4xl font-serif font-bold tracking-tight text-navy">NayAye</h1>
         </div>
@@ -209,7 +209,7 @@ export default function App() {
               </div>
             </div>
 
-            <div className="pt-4">
+            <div className="pt-4 flex justify-center">
               <button
                 type="submit"
                 disabled={loading}
