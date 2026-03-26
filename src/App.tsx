@@ -7,7 +7,6 @@ import React, { useState, useMemo } from 'react';
 import { GoogleGenAI, Type } from "@google/genai";
 import { motion, AnimatePresence } from "motion/react";
 import { 
-  Compass, 
   Map as MapIcon, 
   Scroll, 
   ShieldAlert, 
@@ -124,14 +123,14 @@ export default function App() {
       {/* Header */}
       <header className="legacy-header pb-4 mb-8 text-center md:text-left">
         <div className="flex items-center justify-center md:justify-start gap-3 mb-1">
-          <Compass className="w-10 h-10 text-navy" />
+          <img src="/logo.png" alt="NayAye Logo" className="w-16 h-16 object-contain" />
           <h1 className="text-4xl font-serif font-bold tracking-tight text-navy">NayAye</h1>
         </div>
         <p className="text-gold font-serif italic text-sm ml-1">
           From post roads to prompt roads.
         </p>
         <div className="mt-4 text-xs uppercase tracking-widest text-navy/60 font-semibold">
-          Office of the Surveyor-General for Digital Routes
+          Unofficial Office of the Digital Surveyor
         </div>
       </header>
 
@@ -381,8 +380,12 @@ export default function App() {
       </main>
 
       <footer className="legacy-footer mt-12 py-8 text-center text-xs text-navy/40 font-medium">
-        <p>© 1753-2026 NayAye Advisory Systems. All rights reserved.</p>
-        <p className="mt-2">"An investment in knowledge pays the best interest." — B.F.</p>
+        <p>© 2026 Michael J. Hinkle III. All Rights Reserved.</p>
+        <p className="mt-1">NayAye is a personal research project—an Unofficial Office of the Digital Surveyor.</p>
+        <p className="mt-4 italic">"An investment in knowledge pays the best interest." — B.F.</p>
+        <div className="mt-12 flex justify-center">
+          <img src="/text-logo.png" alt="NayAye Text Logo" className="max-w-[200px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700" />
+        </div>
       </footer>
     </div>
   );
