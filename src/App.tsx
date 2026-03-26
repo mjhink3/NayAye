@@ -119,47 +119,47 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen font-sans p-4 md:p-8 max-w-4xl mx-auto">
+    <div className="min-h-screen font-sans p-2 md:p-4 max-w-4xl mx-auto flex flex-col">
       {/* Header */}
-      <header className="legacy-header pb-4 mb-12 text-center">
-        <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-12 mb-8">
-          <img src="/logo.png" alt="NayAye Logo" className="w-32 h-32 md:w-48 md:h-48 object-contain" />
+      <header className="legacy-header pb-2 mb-4 text-center">
+        <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-2">
+          <img src="/logo.png" alt="NayAye Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
           <div className="text-center md:text-left">
-            <h1 className="text-5xl md:text-7xl font-serif font-bold tracking-tight text-navy">NayAye</h1>
-            <p className="text-gold font-serif italic text-lg mt-2 md:mt-4">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight text-navy leading-none">NayAye</h1>
+            <p className="text-gold font-serif italic text-base mt-1">
               From post roads to prompt roads.
             </p>
           </div>
         </div>
-        <div className="text-xs uppercase tracking-widest text-navy/60 font-semibold">
+        <div className="text-[10px] md:text-xs uppercase tracking-widest text-navy/60 font-semibold">
           Unofficial Office of the Digital Surveyor
         </div>
       </header>
 
-      <main className="space-y-8">
+      <main className="space-y-4 flex-grow">
         {/* Form Section */}
-        <section className="bg-white/50 legacy-border p-6 md:p-8 rounded-sm">
-          <form onSubmit={handleSubmit} className="space-y-6">
+        <section className="bg-white/50 legacy-border p-4 md:p-6 rounded-sm shadow-sm">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div>
-              <label className="block font-serif text-lg mb-2 text-navy">
+              <label className="block font-serif text-base mb-1 text-navy">
                 What art thou trying to do?
               </label>
               <textarea
                 value={goal}
                 onChange={(e) => setGoal(e.target.value)}
                 placeholder="e.g., I wish to automate my correspondence with the local printer..."
-                className="w-full h-32 p-4 bg-parchment/30 border border-navy/20 focus:border-navy focus:ring-0 rounded-none font-sans resize-none transition-colors"
+                className="w-full h-24 p-3 bg-parchment/30 border border-navy/20 focus:border-navy focus:ring-0 rounded-none font-sans resize-none transition-colors text-sm"
                 required
               />
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="space-y-2">
-                <label className="block text-xs font-bold uppercase tracking-wider text-navy/70">Skill Level</label>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+              <div className="space-y-1">
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-navy/70">Skill Level</label>
                 <select 
                   value={skill} 
                   onChange={(e) => setSkill(e.target.value as SkillLevel)}
-                  className="w-full p-2 bg-white border border-navy/20 rounded-none focus:border-navy"
+                  className="w-full p-1.5 bg-white border border-navy/20 rounded-none focus:border-navy text-xs"
                 >
                   <option>Beginner</option>
                   <option>Intermediate</option>
@@ -167,12 +167,12 @@ export default function App() {
                 </select>
               </div>
 
-              <div className="space-y-2">
-                <label className="block text-xs font-bold uppercase tracking-wider text-navy/70">Budget</label>
+              <div className="space-y-1">
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-navy/70">Budget</label>
                 <select 
                   value={budget} 
                   onChange={(e) => setBudget(e.target.value as Budget)}
-                  className="w-full p-2 bg-white border border-navy/20 rounded-none focus:border-navy"
+                  className="w-full p-1.5 bg-white border border-navy/20 rounded-none focus:border-navy text-xs"
                 >
                   <option>Free</option>
                   <option>Low</option>
@@ -180,12 +180,12 @@ export default function App() {
                 </select>
               </div>
 
-              <div className="space-y-2">
-                <label className="block text-xs font-bold uppercase tracking-wider text-navy/70">Privacy Sensitivity</label>
+              <div className="space-y-1">
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-navy/70">Privacy</label>
                 <select 
                   value={privacy} 
                   onChange={(e) => setPrivacy(e.target.value as Privacy)}
-                  className="w-full p-2 bg-white border border-navy/20 rounded-none focus:border-navy"
+                  className="w-full p-1.5 bg-white border border-navy/20 rounded-none focus:border-navy text-xs"
                 >
                   <option>Low</option>
                   <option>Medium</option>
@@ -193,12 +193,12 @@ export default function App() {
                 </select>
               </div>
 
-              <div className="space-y-2">
-                <label className="block text-xs font-bold uppercase tracking-wider text-navy/70">Desired Output</label>
+              <div className="space-y-1">
+                <label className="block text-[10px] font-bold uppercase tracking-wider text-navy/70">Output</label>
                 <select 
                   value={output} 
                   onChange={(e) => setOutput(e.target.value as OutputType)}
-                  className="w-full p-2 bg-white border border-navy/20 rounded-none focus:border-navy"
+                  className="w-full p-1.5 bg-white border border-navy/20 rounded-none focus:border-navy text-xs"
                 >
                   <option>Writing</option>
                   <option>Research</option>
@@ -211,20 +211,20 @@ export default function App() {
               </div>
             </div>
 
-            <div className="pt-4 flex justify-center">
+            <div className="pt-2 flex justify-center">
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full md:w-auto px-8 py-3 bg-navy text-parchment font-serif font-bold text-lg hover:bg-navy/90 disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer"
+                className="w-full md:w-auto px-6 py-2 bg-navy text-parchment font-serif font-bold text-base hover:bg-navy/90 disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
                 {loading ? (
                   <>
-                    <Loader2 className="w-5 h-5 animate-spin" />
-                    Surveying Thy Route...
+                    <Loader2 className="w-4 h-4 animate-spin" />
+                    Surveying...
                   </>
                 ) : (
                   <>
-                    <Scroll className="w-5 h-5" />
+                    <Scroll className="w-4 h-4" />
                     Survey Thy Route
                   </>
                 )}
@@ -235,8 +235,8 @@ export default function App() {
 
         {/* Error Message */}
         {error && (
-          <div className="p-4 bg-red-50 border border-red-200 text-red-800 flex items-center gap-3">
-            <AlertTriangle className="w-5 h-5" />
+          <div className="p-3 bg-red-50 border border-red-200 text-red-800 flex items-center gap-3 text-sm">
+            <AlertTriangle className="w-4 h-4" />
             {error}
           </div>
         )}
@@ -247,62 +247,62 @@ export default function App() {
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              className="space-y-8 pb-12"
+              className="space-y-6 pb-8"
             >
-              <div className="bg-white legacy-border p-8 rounded-sm relative overflow-hidden">
+              <div className="bg-white legacy-border p-6 rounded-sm relative overflow-hidden shadow-lg">
                 {/* Decorative watermark */}
                 <div className="absolute top-0 right-0 p-4 opacity-5 pointer-events-none">
-                  <Scroll className="w-32 h-32" />
+                  <Scroll className="w-24 h-24" />
                 </div>
 
-                <div className="space-y-8">
+                <div className="space-y-6">
                   <section>
-                    <h2 className="text-2xl font-serif font-bold text-navy border-b border-navy/10 pb-2 mb-4 flex items-center gap-2">
-                      <ShieldAlert className="w-6 h-6 text-gold" />
+                    <h2 className="text-xl font-serif font-bold text-navy border-b border-navy/10 pb-1 mb-3 flex items-center gap-2">
+                      <ShieldAlert className="w-5 h-5 text-gold" />
                       NayAye’s Verdict
                     </h2>
-                    <p className="text-lg italic text-navy/90 leading-relaxed">
+                    <p className="text-base italic text-navy/90 leading-relaxed">
                       "{response.verdict}"
                     </p>
                   </section>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <section>
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-gold mb-3">What Thou Actually Needest</h3>
-                      <p className="text-navy/80">{response.actualNeed}</p>
+                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-gold mb-2">What Thou Actually Needest</h3>
+                      <p className="text-sm text-navy/80">{response.actualNeed}</p>
                     </section>
                     <section>
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-gold mb-3">Likely Mistake</h3>
-                      <p className="text-navy/80">{response.likelyMistake}</p>
+                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-gold mb-2">Likely Mistake</h3>
+                      <p className="text-sm text-navy/80">{response.likelyMistake}</p>
                     </section>
                   </div>
 
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-parchment/20 p-6 border border-navy/5">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-parchment/20 p-4 border border-navy/5">
                     <section>
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-navy mb-3 flex items-center gap-2">
-                        <CheckCircle2 className="w-4 h-4 text-forest" />
+                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-navy mb-2 flex items-center gap-2">
+                        <CheckCircle2 className="w-3 h-3 text-forest" />
                         Best Tool
                       </h3>
-                      <p className="text-xl font-serif font-bold text-navy">{response.bestTool}</p>
+                      <p className="text-lg font-serif font-bold text-navy">{response.bestTool}</p>
                     </section>
                     <section>
-                      <h3 className="text-sm font-bold uppercase tracking-widest text-navy mb-3 flex items-center gap-2">
-                        <Info className="w-4 h-4 text-navy/40" />
+                      <h3 className="text-[10px] font-bold uppercase tracking-widest text-navy mb-2 flex items-center gap-2">
+                        <Info className="w-3 h-3 text-navy/40" />
                         Second-Best Option
                       </h3>
-                      <p className="text-xl font-serif font-bold text-navy/60">{response.secondBest}</p>
+                      <p className="text-lg font-serif font-bold text-navy/60">{response.secondBest}</p>
                     </section>
                   </div>
 
                   <section>
-                    <h3 className="text-sm font-bold uppercase tracking-widest text-gold mb-3">Why This Route</h3>
-                    <p className="text-navy/80 leading-relaxed">{response.whyRoute}</p>
+                    <h3 className="text-[10px] font-bold uppercase tracking-widest text-gold mb-2">Why This Route</h3>
+                    <p className="text-sm text-navy/80 leading-relaxed">{response.whyRoute}</p>
                   </section>
 
                   {/* B.Free Map */}
-                  <section className="bg-parchment/40 p-8 border border-navy/10 rounded-sm">
-                    <h2 className="text-2xl font-serif font-bold text-navy border-b border-navy/10 pb-2 mb-8 flex items-center gap-2">
-                      <MapIcon className="w-6 h-6 text-navy" />
+                  <section className="bg-parchment/40 p-6 border border-navy/10 rounded-sm">
+                    <h2 className="text-xl font-serif font-bold text-navy border-b border-navy/10 pb-1 mb-6 flex items-center gap-2">
+                      <MapIcon className="w-5 h-5 text-navy" />
                       B.Free Map: The Surveyed Route
                     </h2>
                     
@@ -314,15 +314,10 @@ export default function App() {
                         
                         {response.mapStages.map((stage, idx) => (
                           <div key={idx} className="relative z-10 flex flex-col items-center group">
-                            <div className="w-32 h-20 bg-white border-2 border-navy flex items-center justify-center p-3 text-center text-xs font-bold text-navy shadow-[4px_4px_0px_rgba(26,43,72,0.1)] group-hover:translate-x-[-2px] group-hover:translate-y-[-2px] group-hover:shadow-[6px_6px_0px_rgba(26,43,72,0.15)] transition-all">
+                            <div className="w-28 h-16 bg-white border-2 border-navy flex items-center justify-center p-2 text-center text-[10px] font-bold text-navy shadow-[3px_3px_0px_rgba(26,43,72,0.1)] group-hover:translate-x-[-1px] group-hover:translate-y-[-1px] group-hover:shadow-[4px_4px_0px_rgba(26,43,72,0.15)] transition-all">
                               {stage}
                             </div>
-                            {idx < response.mapStages.length - 1 && (
-                              <div className="absolute -right-4 top-1/2 -translate-y-1/2 bg-parchment px-1">
-                                <ArrowRight className="w-4 h-4 text-navy" />
-                              </div>
-                            )}
-                            <div className="mt-2 text-[10px] font-bold text-gold uppercase tracking-tighter">
+                            <div className="mt-1 text-[8px] font-bold text-gold uppercase tracking-tighter">
                               Stage {idx + 1}
                             </div>
                           </div>
@@ -330,38 +325,24 @@ export default function App() {
                       </div>
 
                       {/* Mobile Flow (Vertical) */}
-                      <div className="md:hidden flex flex-col items-center gap-6 relative">
+                      <div className="md:hidden flex flex-col items-center gap-4 relative">
                         {/* Connecting Line */}
                         <div className="absolute left-1/2 top-0 h-full w-0.5 bg-navy/10 -translate-x-1/2 z-0" />
                         
                         {response.mapStages.map((stage, idx) => (
                           <div key={idx} className="relative z-10 flex flex-col items-center w-full">
-                            <div className="w-48 h-16 bg-white border-2 border-navy flex items-center justify-center p-3 text-center text-xs font-bold text-navy shadow-[4px_4px_0px_rgba(26,43,72,0.1)]">
+                            <div className="w-40 h-12 bg-white border-2 border-navy flex items-center justify-center p-2 text-center text-[10px] font-bold text-navy shadow-[3px_3px_0px_rgba(26,43,72,0.1)]">
                               {stage}
                             </div>
-                            {idx < response.mapStages.length - 1 && (
-                              <div className="my-2 bg-parchment py-1">
-                                <motion.div 
-                                  animate={{ y: [0, 5, 0] }}
-                                  transition={{ repeat: Infinity, duration: 2 }}
-                                >
-                                  <ArrowRight className="w-5 h-5 text-navy rotate-90" />
-                                </motion.div>
-                              </div>
-                            )}
                           </div>
                         ))}
                       </div>
                     </div>
-                    
-                    <div className="mt-8 text-[10px] italic text-navy/40 text-center font-serif">
-                      * Surveyed according to the principles of efficient post-road management.
-                    </div>
                   </section>
 
-                  <section className="bg-navy text-parchment p-6">
-                    <h3 className="text-xs font-bold uppercase tracking-[0.2em] text-gold mb-2">First Action</h3>
-                    <p className="text-xl font-serif italic">
+                  <section className="bg-navy text-parchment p-4">
+                    <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-1">First Action</h3>
+                    <p className="text-lg font-serif italic">
                       {response.firstAction}
                     </p>
                   </section>
@@ -371,7 +352,7 @@ export default function App() {
               <div className="text-center">
                 <button 
                   onClick={() => window.print()}
-                  className="text-xs uppercase tracking-widest text-navy/40 hover:text-navy transition-colors font-bold"
+                  className="text-[10px] uppercase tracking-widest text-navy/40 hover:text-navy transition-colors font-bold"
                 >
                   [ Print this Survey for thy Records ]
                 </button>
@@ -381,12 +362,12 @@ export default function App() {
         </AnimatePresence>
       </main>
 
-      <footer className="legacy-footer mt-12 py-8 text-center text-xs text-navy/40 font-medium">
+      <footer className="legacy-footer mt-4 py-4 text-center text-[10px] md:text-xs text-navy/40 font-medium border-t border-navy/5">
         <p>© 2026 Michael J. Hinkle III. All Rights Reserved.</p>
-        <p className="mt-1">NayAye is a personal research project—an Unofficial Office of the Digital Surveyor.</p>
-        <p className="mt-4 italic">"An investment in knowledge pays the best interest." — B.F.</p>
-        <div className="mt-12 flex justify-center">
-          <img src="/text-logo.png" alt="NayAye Text Logo" className="max-w-[200px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700" />
+        <p className="mt-0.5">NayAye is a personal research project—an Unofficial Office of the Digital Surveyor.</p>
+        <p className="mt-2 italic">"An investment in knowledge pays the best interest." — B.F.</p>
+        <div className="mt-4 flex justify-center">
+          <img src="/text-logo.png" alt="NayAye Text Logo" className="max-w-[280px] md:max-w-[350px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700" />
         </div>
       </footer>
     </div>
