@@ -37,8 +37,18 @@ interface NayAyeResponse {
 }
 
 const TOOL_CATALOG = [
-  "ChatGPT", "Gemini", "Claude", "Perplexity", "n8n", "Cursor", "Replit", 
-  "Midjourney", "Canva", "Notion", "Google Docs", "Sheets"
+  // General & Research
+  "ChatGPT", "Gemini", "Claude", "Perplexity", "Elicit", "Consensus",
+  // Automation & Ops
+  "n8n", "Zapier", "Make.com", "Bardeen", "Trello",
+  // Coding & Development
+  "Cursor", "Replit", "GitHub Copilot", "v0.dev", "Lovable", "Bolt.new",
+  // Design & Creative
+  "Midjourney", "Canva", "Figma", "Adobe Firefly", "Gamma",
+  // Video & Audio
+  "Runway", "Pika", "HeyGen", "ElevenLabs", "Suno",
+  // Productivity & Data
+  "Notion", "Airtable", "Obsidian", "Google Docs", "Sheets", "Excel"
 ];
 
 export default function App() {
