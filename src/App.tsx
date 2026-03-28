@@ -323,14 +323,26 @@ export default function App() {
                         <div className="absolute top-1/2 left-0 w-full h-0.5 bg-navy/10 -translate-y-1/2 z-0" />
                         
                         {response.mapStages.map((stage, idx) => (
-                          <div key={idx} className="relative z-10 flex flex-col items-center group">
-                            <div className="w-28 h-16 bg-white border-2 border-navy flex items-center justify-center p-2 text-center text-[10px] font-bold text-navy shadow-[3px_3px_0px_rgba(26,43,72,0.1)] group-hover:translate-x-[-1px] group-hover:translate-y-[-1px] group-hover:shadow-[4px_4px_0px_rgba(26,43,72,0.15)] transition-all">
-                              {stage}
+                          <React.Fragment key={idx}>
+                            <div className="relative z-10 flex flex-col items-center group">
+                              <div className="w-28 h-16 bg-white border-2 border-navy flex items-center justify-center p-2 text-center text-[10px] font-bold text-navy shadow-[3px_3px_0px_rgba(26,43,72,0.1)] group-hover:translate-x-[-1px] group-hover:translate-y-[-1px] group-hover:shadow-[4px_4px_0px_rgba(26,43,72,0.15)] transition-all">
+                                {stage}
+                              </div>
+                              <div className="mt-1 text-[8px] font-bold text-gold uppercase tracking-tighter">
+                                Stage {idx + 1}
+                              </div>
                             </div>
-                            <div className="mt-1 text-[8px] font-bold text-gold uppercase tracking-tighter">
-                              Stage {idx + 1}
-                            </div>
-                          </div>
+                            {idx < response.mapStages.length - 1 && (
+                              <div className="relative z-10 flex items-center justify-center">
+                                <motion.div
+                                  animate={{ x: [0, 4, 0] }}
+                                  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                                >
+                                  <ArrowRight className="w-4 h-4 text-navy/40" />
+                                </motion.div>
+                              </div>
+                            )}
+                          </React.Fragment>
                         ))}
                       </div>
 
@@ -340,11 +352,23 @@ export default function App() {
                         <div className="absolute left-1/2 top-0 h-full w-0.5 bg-navy/10 -translate-x-1/2 z-0" />
                         
                         {response.mapStages.map((stage, idx) => (
-                          <div key={idx} className="relative z-10 flex flex-col items-center w-full">
-                            <div className="w-40 h-12 bg-white border-2 border-navy flex items-center justify-center p-2 text-center text-[10px] font-bold text-navy shadow-[3px_3px_0px_rgba(26,43,72,0.1)]">
-                              {stage}
+                          <React.Fragment key={idx}>
+                            <div className="relative z-10 flex flex-col items-center w-full">
+                              <div className="w-40 h-12 bg-white border-2 border-navy flex items-center justify-center p-2 text-center text-[10px] font-bold text-navy shadow-[3px_3px_0px_rgba(26,43,72,0.1)]">
+                                {stage}
+                              </div>
                             </div>
-                          </div>
+                            {idx < response.mapStages.length - 1 && (
+                              <div className="relative z-10 flex items-center justify-center py-1">
+                                <motion.div
+                                  animate={{ y: [0, 4, 0] }}
+                                  transition={{ repeat: Infinity, duration: 1.5, ease: "easeInOut" }}
+                                >
+                                  <ArrowRight className="w-5 h-5 text-navy/40 rotate-90" />
+                                </motion.div>
+                              </div>
+                            )}
+                          </React.Fragment>
                         ))}
                       </div>
                     </div>
@@ -362,7 +386,7 @@ export default function App() {
               <div className="text-center">
                 <button 
                   onClick={() => window.print()}
-                  className="text-[10px] uppercase tracking-widest text-navy/40 hover:text-navy transition-colors font-bold"
+                  className="px-6 py-2 border border-navy/10 text-xs md:text-sm uppercase tracking-widest text-navy/60 hover:text-navy hover:bg-parchment/50 transition-all font-bold rounded-sm"
                 >
                   [ Print this Survey for thy Records ]
                 </button>
@@ -374,7 +398,7 @@ export default function App() {
 
       <footer className="legacy-footer mt-4 py-4 text-center text-[10px] md:text-xs text-navy/40 font-medium border-t border-navy/5">
         <p>© 2026 Michael J. Hinkle III. All Rights Reserved.</p>
-        <p className="mt-0.5">NayAye is a personal research project—an Unofficial Office of the Digital Surveyor.</p>
+        <p className="mt-0.5">NayAye—Unofficial Office of the Digital Surveyor</p>
         <p className="mt-2 italic">"An investment in knowledge pays the best interest." — B.F.</p>
         <div className="mt-4 flex justify-center">
           <img src="/text-logo.png" alt="NayAye Text Logo" className="max-w-[280px] md:max-w-[350px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700" />
