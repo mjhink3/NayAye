@@ -133,7 +133,10 @@ export default function App() {
       {/* Header */}
       <header className="legacy-header pb-2 mb-4 text-center">
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-2">
-          <img src="/logo.png" alt="NayAye Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+          <div className="flex items-center gap-2">
+            <img src="/logo.png" alt="NayAye Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+            <img src="/input_file_0.png" alt="Franklin Goat Mascot" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+          </div>
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight text-navy leading-none">NayAye</h1>
             <p className="text-gold font-serif italic text-base mt-1">
@@ -225,7 +228,7 @@ export default function App() {
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full md:w-auto px-6 py-2 bg-navy text-parchment font-serif font-bold text-base hover:bg-navy/90 disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
+                className="w-full md:w-auto px-6 py-2 bg-purple text-parchment font-serif font-bold text-base hover:bg-purple/90 disabled:opacity-50 transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
               >
                 {loading ? (
                   <>
@@ -268,7 +271,7 @@ export default function App() {
                 <div className="space-y-6">
                   <section>
                     <h2 className="text-xl font-serif font-bold text-navy border-b border-navy/10 pb-1 mb-3 flex items-center gap-2">
-                      <ShieldAlert className="w-5 h-5 text-gold" />
+                      <ShieldAlert className="w-5 h-5 text-purple" />
                       NayAye’s Verdict
                     </h2>
                     <p className="text-base italic text-navy/90 leading-relaxed">
@@ -328,7 +331,7 @@ export default function App() {
                               <div className="w-28 h-16 bg-white border-2 border-navy flex items-center justify-center p-2 text-center text-[10px] font-bold text-navy shadow-[3px_3px_0px_rgba(26,43,72,0.1)] group-hover:translate-x-[-1px] group-hover:translate-y-[-1px] group-hover:shadow-[4px_4px_0px_rgba(26,43,72,0.15)] transition-all">
                                 {stage}
                               </div>
-                              <div className="mt-1 text-[8px] font-bold text-gold uppercase tracking-tighter">
+                              <div className="mt-1 text-[8px] font-bold text-purple uppercase tracking-tighter">
                                 Stage {idx + 1}
                               </div>
                             </div>
@@ -374,7 +377,7 @@ export default function App() {
                     </div>
                   </section>
 
-                  <section className="bg-navy text-parchment p-4">
+                  <section className="bg-purple text-parchment p-4">
                     <h3 className="text-[10px] font-bold uppercase tracking-[0.2em] text-gold mb-1">First Action</h3>
                     <p className="text-lg font-serif italic">
                       {response.firstAction}
@@ -399,6 +402,9 @@ export default function App() {
       <footer className="legacy-footer mt-4 py-4 text-center text-[10px] md:text-xs text-navy/40 font-medium border-t border-navy/5">
         <p>© 2026 Michael J. Hinkle III. All Rights Reserved.</p>
         <p className="mt-0.5">NayAye—Unofficial Office of the Digital Surveyor</p>
+        <div className="mt-3 mb-2 flex justify-center">
+          <img src="/input_file_0.png" alt="Franklin Goat Mascot" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
+        </div>
         <p className="mt-2 italic">"An investment in knowledge pays the best interest." — B.F.</p>
         <div className="mt-4 flex justify-center">
           <img src="/text-logo.png" alt="NayAye Text Logo" className="max-w-[280px] md:max-w-[350px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700" />
