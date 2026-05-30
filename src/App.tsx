@@ -135,7 +135,7 @@ export default function App() {
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-2">
           <div className="flex items-center gap-2">
             <img src="/logo.png" alt="NayAye Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
-            <img src="/input_file_0.png" alt="Franklin Goat Mascot" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+            <img src="/NayAye_goat_logo.png" alt="Franklin Goat Mascot" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
           </div>
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight text-navy leading-none">NayAye</h1>
@@ -403,7 +403,7 @@ export default function App() {
         <p>© 2026 Michael J. Hinkle III. All Rights Reserved.</p>
         <p className="mt-0.5">NayAye—Unofficial Office of the Digital Surveyor</p>
         <div className="mt-3 mb-2 flex justify-center">
-          <img src="/input_file_0.png" alt="Franklin Goat Mascot" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
+          <img src="/NayAye_goat_logo.png" alt="Franklin Goat Mascot" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
         </div>
         <p className="mt-2 italic">"An investment in knowledge pays the best interest." — B.F.</p>
         <div className="mt-4 flex justify-center">
