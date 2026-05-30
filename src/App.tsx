@@ -134,8 +134,8 @@ export default function App() {
       <header className="legacy-header pb-2 mb-4 text-center">
         <div className="flex flex-col md:flex-row items-center justify-center gap-3 mb-2">
           <div className="flex items-center gap-2">
-            <img src="/logo.png" alt="NayAye Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
-            <img src="/NayAye_goat_logo.png" alt="Franklin Goat Mascot" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+            <img src="logo.png" alt="NayAye Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" referrerPolicy="no-referrer" />
+            <img src="NayAye_goat_logo.png" alt="Franklin Goat Mascot" className="w-24 h-24 md:w-32 md:h-32 object-contain" referrerPolicy="no-referrer" />
           </div>
           <div className="text-center md:text-left">
             <h1 className="text-4xl md:text-6xl font-serif font-bold tracking-tight text-navy leading-none">NayAye</h1>
@@ -403,11 +403,11 @@ export default function App() {
         <p>© 2026 Michael J. Hinkle III. All Rights Reserved.</p>
         <p className="mt-0.5">NayAye—Unofficial Office of the Digital Surveyor</p>
         <div className="mt-3 mb-2 flex justify-center">
-          <img src="/NayAye_goat_logo.png" alt="Franklin Goat Mascot" className="w-16 h-16 md:w-20 md:h-20 object-contain" />
+          <img src="NayAye_goat_logo.png" alt="Franklin Goat Mascot" className="w-16 h-16 md:w-20 md:h-20 object-contain" referrerPolicy="no-referrer" />
         </div>
         <p className="mt-2 italic">"An investment in knowledge pays the best interest." — B.F.</p>
         <div className="mt-4 flex justify-center">
-          <img src="/text-logo.png" alt="NayAye Text Logo" className="max-w-[280px] md:max-w-[350px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700" />
+          <img src="text-logo.png" alt="NayAye Text Logo" className="max-w-[280px] md:max-w-[350px] opacity-60 grayscale hover:opacity-100 hover:grayscale-0 transition-all duration-700" referrerPolicy="no-referrer" />
         </div>
       </footer>
     </div>
